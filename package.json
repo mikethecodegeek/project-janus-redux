@@ -1,0 +1,24 @@
+{
+  "name": "facial-recognition-music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brehar/facial-recognition-music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brehar/facial-recognition-music/issues"
+  },
+  "homepage": "https://github.com/brehar/facial-recognition-music#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
+  }
+}

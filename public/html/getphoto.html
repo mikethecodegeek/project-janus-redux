@@ -1,0 +1,82 @@
+<!-- JUMBOTRON START  -->
+<div class="jumbotron text-center splash">
+    <h1>SNAP A PIC</h1>
+    <!-- DOWN ARROW -->
+    <div class="mouse_scroll">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div>
+            <span class="m_scroll_arrows unu"></span>
+            <span class="m_scroll_arrows doi"></span>
+            <span class="m_scroll_arrows trei"></span>
+        </div>
+    </div>
+    <!-- DOWN ARROW END -->
+</div>
+<!-- JUMBOTRON END -->
+
+<div class="container">
+    <div class="page-header">
+        <p class="photo-page-text">Take a picture of your face to get your mood-based playlist</p>
+    </div>
+    <div class="row">
+
+        <div class="col-md-8">
+            <div class="centerBlock">
+                <div class="video-header">
+                    Please Center Face in Camera
+                </div>
+                <br>
+                <div id="my_camera"></div>
+                <br>
+                <form>
+                    <input type="button" class="btn-primary" value="Snap It" ng-click="take_snapshot()">
+                </form>
+            </div>
+        </div>
+        <!-- PREVIEW -->
+
+        <div class="col-md-4">
+            <div class="box" id="Prev">
+                <b class="video-header">Snap Preview...</b>
+                <br>
+                <br>
+                <div class="camera-placeholder" ng-hide="photoTaken"><i class="fa fa-camera-retro fa-5x"></i></div>
+                <div id="results"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box hidden" id="Saved">
+        <b>Saved</b><span id="loading"></span><img id="uploaded" src="" />
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-header">
+        <p class="lead">Once you've snapped it, you can get your customized playlist</p>
+        <!-- RADIO -->
+        <div class="radio-section">
+          <form>
+              <div class="controls">
+                  <h1>Radio Boxes</h1>
+                  <input id='random-option' type="radio" name='r-group-1' checked='checked' ng-model="option" value="random">
+                  <label for="random-option">RANDOM</label>
+
+                  <input id='personal-option' type="radio" name='r-group-1' ng-model="option" value="personal">
+                  <label for="personal-option">PERSONAL</label>
+
+                  <h4>Spotify Username</h4>
+                  Your Username:
+                  <input type="text" name="Spotify Username" ng-model="username" />
+              </div>
+          </form>
+        </div>
+        <div class="my-playlist-wrapper">
+            <button type="button" class="btn-primary my-playlist-button" id="getMood">My Mood Playlist</button>
+        </div>
+        <!-- RADIO END -->
+    </div>
+</div>

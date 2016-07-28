@@ -1,0 +1,23 @@
+{
+  "name": "facial-recognition-music",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Kim Sarabia <kimberly.sarabia@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/brehar/facial-recognition-music",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4"
+  }
+}
