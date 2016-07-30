@@ -99,7 +99,7 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
         ajax.addEventListener("load", function (event) {
             uploadcomplete(event);
         }, false);
-        ajax.open("POST", "/upload.php");
+        ajax.open("POST", "../upload.php");
         ajax.send(formdata);
     };
 
