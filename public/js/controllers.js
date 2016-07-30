@@ -99,7 +99,7 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
         ajax.addEventListener("load", function (event) {
             uploadcomplete(event);
         }, false);
-        ajax.open("POST", "http://projectjanus.esy.es/");
+        ajax.open("POST", "https://powerful-gorge-83468.herokuapp.com/");
         ajax.send(formdata);
     };
 
@@ -126,7 +126,7 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
             },
             type: "POST",
-            data: "{\"url\": \"http://projectjanus.esy.es/mypic.png\"}"
+            data: "{\"url\": \"https://powerful-gorge-83468.herokuapp.com/mypic.png\"}"
         })
             .done(function (response) {
                 $('#response').html(response);
