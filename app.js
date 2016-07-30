@@ -10,6 +10,9 @@ var app = express();
 app.use(morgan('dev'));
 app.use(express.static('public'));
 
+app.post('upload',(req,res) => {
+  
+})
 app.listen(PORT, err => {
     console.log(err || `Server listening on port ${PORT}`);
 });

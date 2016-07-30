@@ -99,14 +99,14 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
         ajax.addEventListener("load", function (event) {
             uploadcomplete(event);
         }, false);
-        ajax.open("POST", "../html/upload.php");
+        ajax.open("POST", "/upload.php");
         ajax.send(formdata);
     };
 
     function uploadcomplete(event) {
         document.getElementById("loading").innerHTML = "";
         var image_return = event.target.responseText;
-        var showup = document.getElementById("uploaded").src = '../html/mypic.png';
+        var showup = document.getElementById("uploaded").src = '/mypic.png';
     }
 
     function getEmotions() {
@@ -126,7 +126,7 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
             },
             type: "POST",
-            data: "{\"url\": \"/html/mypic.png\"}"
+            data: "{\"url\": \"./html/mypic.png\"}"
         })
             .done(function (response) {
                 $('#response').html(response);
