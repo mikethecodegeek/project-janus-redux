@@ -99,14 +99,14 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
         ajax.addEventListener("load", function (event) {
             uploadcomplete(event);
         }, false);
-        ajax.open("POST", "/html/upload.php");
+        ajax.open("POST", "../html/upload.php");
         ajax.send(formdata);
     };
 
     function uploadcomplete(event) {
         document.getElementById("loading").innerHTML = "";
         var image_return = event.target.responseText;
-        var showup = document.getElementById("uploaded").src = '/html/mypic.png';
+        var showup = document.getElementById("uploaded").src = '../html/mypic.png';
     }
 
     function getEmotions() {
