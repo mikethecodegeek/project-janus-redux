@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 $img = $_POST['base64image'];
 $img = str_replace('data:image/jpeg;base64,', '', $img);
 $img = str_replace(' ', '+', $img);
