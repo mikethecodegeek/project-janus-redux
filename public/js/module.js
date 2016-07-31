@@ -11,6 +11,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/musicresults',
         templateUrl: '/html/musicresults.html',
         controller: 'musicresultsCtrl'
+    }).state('playlist', {
+        url: '/playlist',
+        templateUrl: '/html/playlist.html',
+        controller: 'playlistCtrl'
     }).state('getphoto', {
         url: '/getphoto',
         templateUrl: '/html/getphoto.html',

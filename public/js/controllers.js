@@ -232,3 +232,11 @@ app.controller('homeCtrl', function ($scope, $state) {
   });
   }
 });
+
+app.controller('playlistCtrl', function ($scope, $state, $http) {
+console.log("Playlist Works!");
+  $http.get('playlist.json').success(function(data) {
+     $scope.playlist = data;
+     console.log('playlist:',$scope.playlist);
+  });
+});
