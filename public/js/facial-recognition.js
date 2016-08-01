@@ -1,5 +1,3 @@
-
-
 $(document).ready(init);
 
 function init() {
@@ -11,9 +9,6 @@ var apiKey = "1dd1f4e23a5743139399788aa30a7153";
        $('#imageUploadButton').on('click',function () {
          console.log('image upload click!!!');
              var file = document.getElementById('filename').files[0];
-           //console.log(file)
-           //var file = 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Barack_Obama.jpg (147KB)
-           //localStorage.setItem('image',file)
            CallAPI(file,apiUrl,apiKey)
        });
 

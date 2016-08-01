@@ -1,4 +1,4 @@
-<div class="container">
-  <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A65V6djkcVRyOStLd8nza8E" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<div class="container" ng-if="ready">
+  <iframe ng-src="{{url}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
-<div class="back">Back</div>
+<div ui-sref="home">Back</div>

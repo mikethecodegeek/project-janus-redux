@@ -26,7 +26,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.config(function(SpotifyProvider) {
     SpotifyProvider.setClientId('b52dc91988324fd697d1f2db77378d46');
-
     $.ajax({
         url: 'https://spotify-token.herokuapp.com',
         method: 'GET',

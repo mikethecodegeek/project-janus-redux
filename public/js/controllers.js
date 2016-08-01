@@ -142,9 +142,13 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
     window.onload = ShowCam();
 });
 
-app.controller('homeCtrl', function ($scope, $state) {
+app.controller('homeCtrl', ['$scope','$state','moodService',function ($scope, $state,moodService) {
     var mymood1=[];
-
+    $scope.gotToPlaylist = function(event,mood){
+        event.preventDefault();
+        moodService.setMood(mood);
+        $state.go('playlist');
+    }
     $scope.getFacialExpressionScore = function () {
         console.log('getFacialExpressionScore');
         var apiKey = "1dd1f4e23a5743139399788aa30a7153";
@@ -214,7 +218,6 @@ app.controller('homeCtrl', function ($scope, $state) {
 
   function displayMood(data){
     $('#response').html(response);
-    // console.log(response[0]);
     var response = data;
     var moodData = response[0].scores;
     var moodArray = [];
@@ -231,12 +234,29 @@ app.controller('homeCtrl', function ($scope, $state) {
     return response[key];
   });
   }
-});
+}]);
 
-app.controller('playlistCtrl', function ($scope, $state, $http) {
-console.log("Playlist Works!");
-  $http.get('playlist.json').success(function(data) {
-     $scope.playlist = data;
-     console.log('playlist:',$scope.playlist);
+
+
+app.controller('playlistCtrl', ['$scope','$http','moodService','$sce',function($scope, $http,moodService,$sce){
+  $scope.playlists = [];
+  $scope.ready = false;
+  $scope.url = null;
+  moodService.getPlaylists().then(function(res){
+      $scope.playlists = res.data;
+      var mood = moodService.getMood();
+      console.log($scope.playlists);
+      var playlistObject = $scope.playlists.find(function(i){
+
+            return i.mood == mood;
+      });
+      $scope.ready = true;
+      if(playlistObject){
+          $scope.url = $sce.trustAsResourceUrl(playlistObject.url);
+        }
+
+  }).catch(function(err){
+    console.log(err);
   });
-});
+
+}]);
