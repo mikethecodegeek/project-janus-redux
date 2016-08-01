@@ -12,7 +12,7 @@ router.get('/', function(req, res){
     }
     res.send(playlists);
   });
-}); //end get
+});
 
 router.get('/:mood', function(req, res){
   Playlist.get(function(err, playlists){
@@ -24,6 +24,6 @@ router.get('/:mood', function(req, res){
       return playlistObj.mood === mood;
     });
   });
-}); //end get to mood
+});
 
 module.exports = router;

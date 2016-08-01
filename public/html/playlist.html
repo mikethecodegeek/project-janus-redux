@@ -1,4 +1,13 @@
-<div class="container" ng-if="ready">
-  <iframe ng-src="{{url}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<link rel="stylesheet" href="/css/playlist.css"/>
+
+<div class="playlist-state">
+  <div class="playlist-container" ng-if="ready">
+    <div class="spotify-embed">
+      <h2>{{mood}} Playlist</h2>
+      <br>
+      <iframe ng-src="{{url}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <br>
+      <a ui-sref="home">Back</a>
+    </div>
+  </div>
 </div>
-<div ui-sref="home">Back</div>

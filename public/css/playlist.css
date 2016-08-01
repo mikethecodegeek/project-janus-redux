@@ -1,0 +1,23 @@
+h2 {
+  color: white;
+}
+
+.playlist-state {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background: #F09819;
+  background: -webkit-linear-gradient(to left, #F09819, #EDDE5D);
+  background: linear-gradient(to left, #F09819, #EDDE5D);
+}
+
+.playlist-header {
+  color:white;
+}
+
+.spotify-embed {
+  text-align: center;
+}
+
+a {
+    color: white;
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('musicApp', ['ui.router', 'spotify']);
+var app = angular.module('musicApp', ['ui.router', 'spotify', 'angular-loading-bar']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {

@@ -247,11 +247,12 @@ app.controller('playlistCtrl', ['$scope','$http','moodService','$sce',function($
       var mood = moodService.getMood();
       console.log($scope.playlists);
       var playlistObject = $scope.playlists.find(function(i){
-
             return i.mood == mood;
       });
+      console.log('mood:', playlistObject.mood);
       $scope.ready = true;
       if(playlistObject){
+        $scope.mood = playlistObject.mood;
           $scope.url = $sce.trustAsResourceUrl(playlistObject.url);
         }
 
