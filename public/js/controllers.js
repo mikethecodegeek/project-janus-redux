@@ -149,6 +149,12 @@ app.controller('homeCtrl', ['$scope','$state','moodService',function ($scope, $s
         moodService.setMood(mood);
         $state.go('playlist');
     }
+    
+    $scope.goToPhoto = function() {
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "https://powerful-gorge-83468.herokuapp.com/");
+        $state.go('getphoto')
+    }
     $scope.getFacialExpressionScore = function () {
         console.log('getFacialExpressionScore');
         var apiKey = "1dd1f4e23a5743139399788aa30a7153";
