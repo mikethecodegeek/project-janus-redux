@@ -5,3 +5,8 @@ body {
   background: -webkit-linear-gradient(to left, #F09819, #EDDE5D);
   background: linear-gradient(to left, #F09819, #EDDE5D);
 }
+
+a {
+  color: white;
+  text-decoration: underline;
+}

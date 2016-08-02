@@ -1,325 +1,336 @@
 <link rel="stylesheet" href="/css/home.css"/>
-<header>
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in">Use Facial Recognition Technology To Explore Musical Genres</div>
-            <div class="intro-heading">Your Mood-Based Music Experience Is Here</div>
-            <a ui-sref="getphoto" class="page-scroll btn btn-xl">GET MY PLAYLIST</a>
-        </div>
-    </div>
-</header>
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">HOW DOES IT WORK?</h2>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">SNAP OR UPLOAD YOUR PICTURE</h4>
-                <p class="text-muted">Take a clear photo of your face</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-windows fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">ANALYZING YOUR EXPRESSION THROUGH COGNITIVE SOFTWARE</h4>
-                <p class="text-muted">We use the Microsoft Project Oxford Face API to detect your emotions</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-spotify fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">DELIVERING MUSIC THAT MATCHES YOUR MOOD</h4>
-                <p class="text-muted"> Spotify API returns your customized playlist</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="sample-playlists" class="bg-light-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">SAMPLE PLAYLISTS</h2>
-                <h3 class="section-subheading text-muted"> <span style="color:gray">See mood and playlist pairings for famous faces </span> </h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 sample-playlists-item">
-                <a ng-click="gotToPlaylist($event,'happy')" class="sample-playlists-link" data-toggle="modal">
-                    <div class="sample-playlists-hover">
-                        <div class="sample-playlists-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/sample-playlists/HAPPY.png" class="img-responsive" alt="">
-                </a>
-                <div class="sample-playlists-caption">
-                    <h4>Barack Obama</h4>
-                    <p class="text-muted">Happy</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 sample-playlists-item">
-                <a ng-click="gotToPlaylist($event,'surprise')"  class="sample-playlists-link" data-toggle="modal">
-                    <div class="sample-playlists-hover">
-                        <div class="sample-playlists-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/sample-playlists/BRUNO_MARS_FINAL.png" class="img-responsive" alt="">
-                </a>
-                <div class="sample-playlists-caption">
-                    <h4>Bruno Mars</h4>
-                    <p class="text-muted">Surprise</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 sample-playlists-item">
-                <a ng-click="gotToPlaylist($event,'sad')" class="sample-playlists-link" data-toggle="modal">
-                    <div class="sample-playlists-hover">
-                        <div class="sample-playlists-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/sample-playlists/SADNESS.png" class="img-responsive" alt="">
-                </a>
-                <div class="sample-playlists-caption">
-                    <h4>Child</h4>
-                    <p class="text-muted">Sad</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 sample-playlists-item">
-                <a ng-click="gotToPlaylist($event,'neutral')"  class="sample-playlists-link" data-toggle="modal">
-                    <div class="sample-playlists-hover">
-                        <div class="sample-playlists-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/sample-playlists/SCARLETT_JOHANSSEN_FINAL.png" class="img-responsive" alt="">
-                </a>
-                <div class="sample-playlists-caption">
-                    <h4>Scarlett Johanssen</h4>
-                    <p class="text-muted">Neutral</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 sample-playlists-item">
-                <a ng-click="gotToPlaylist($event,'anger')"  class="sample-playlists-link" data-toggle="modal">
-                    <div class="sample-playlists-hover">
-                        <div class="sample-playlists-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/sample-playlists/ANGER.png" class="img-responsive" alt="">
-                </a>
-                <div class="sample-playlists-caption">
-                    <h4>Hugh Laurie</h4>
-                    <p class="text-muted">Anger</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 sample-playlists-item">
-                <a ng-click="gotToPlaylist($event,'disgust')" class="sample-playlists-link" data-toggle="modal">
-                    <div class="sample-playlists-hover">
-                        <div class="sample-playlists-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/sample-playlists/DISGUST.png" class="img-responsive" alt="">
-                </a>
-                <div class="sample-playlists-caption">
-                    <h4>Woman</h4>
-                    <p class="text-muted">Disgust</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">What Can Janus Do?</h2>
-                <h3 class="section-subheading text-muted">Gauge emotions based on facial recognition tech</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/party.png" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Smart Parties</h4>
-                                <h4 class="subheading">No Need for a DJ</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Generate a playlist based on the partygoers emotions</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/cafe.png" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Satisfy Patrons</h4>
-                                <h4 class="subheading">Great for Cafes and Restaurants</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Say goodbye to music that annoys your patrons. Janus can tell you whether your playlist is working for your customers.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/person.png" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Home and Health</h4>
-                                <h4 class="subheading">Your own personal music picker</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Track your mood in a fun way and keep track of your mental state</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>Learn
-                                <br>More
-                                <br>Today</h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">TRY IT NOW</h2>
-                <h3 class="section-subheading text-muted">Upload or Add a URL of Your Face</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="demo-form">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <div>
-                                <span style="color: white; font-size: 1.25em; text-align: center;">Copy and Paste an Image URL</span>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Image URL *" id="img-url">
-                            </div>
-                            <div class="clearfix"></div>
-                            <div id="success"></div>
-                            <button type="submit" ng-click="urlEmotion()" class="btn btn-xl">Image URL</button>
-                            <br>
-                            <br>
-                            <br>
-                            <div>
-                                <span style="color: white; font-size: 1.25em; text-align: center;">Have your own file?</span>
-                            </div>
-                            <br>
-                            <label for="filename" class="custom-file-upload">
-                                <i class="fa fa-cloud-upload"></i> CHOOSE FILE
-                            </label>
-                            <input id="filename" type="file" />
-                            <button id="imageUploadButton" class="btn btn-xl" ng-click='getFacialExpressionScore() '>Upload</button>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 column-height-fix">
-                            <h2 ng-hide="currentImage" style="color:white;">Your Mood Stats Here</h2>
-                            <img class="round" ng-src={{currentImage}}></img>
-                            <div class="emotion-demo-header" ng-show="currentImage"> <span style="font-size: 2em; color: #FFFFFF; font-family: arial"> Your Mood Scores </span></div>
-                            <button class="redirect-btn" ng-show="currentImage" ui-sref='getphoto'>Get Your Playlist</button>
-                            <span style="font-size: 1em; color: #FFFFFF; font-family: arial;">
-                            <ul style="list-style-type: none;" ng-repeat="mood in emotionsArr">
-                            <li style="list-style-type: none;">{{mood[1]}} {{mood[0]}}&#47;10</li>
-                          </ul>
-                          </span>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="team">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <div class="col-lg-12">
-          <div class="col-lg-12 text-center">
-              <h2 class="section-heading">We are the Project Janus Team</h2>
-              <h3 class="section-subheading text-muted">We speak JavaScript and we love to build this</h3>
+<div class="ng-cloak">
+
+  <header>
+      <div class="container">
+          <div class="intro-text">
+              <div class="intro-lead-in">Use Facial Recognition Technology To Explore Musical Genres</div>
+              <div class="intro-heading">Your Mood-Based Music Experience Is Here</div>
+              <a ui-sref="getphoto" class="page-scroll btn btn-xl">GET MY PLAYLIST</a>
           </div>
-          <div class="row pt-md">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
-              <div class="img-box">
-                <img src="/img/team/brett-linkedin-profile.jpeg" class="img-responsive">
-                <ul class="text-center">
-                  <a href="https://github.com/brehar"><li><i class="fa fa-github"></i></li></a>
-                  <a href="https://www.linkedin.com/in/brett-hartman-37955659"><li><i class="fa fa-linkedin"></i></li></a>
-                  <a href="https://twitter.com/bretthartman8"><li><i class="fa fa-twitter"></i></li></a>
-                </ul>
+      </div>
+  </header>
+  <section id="services">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">HOW DOES IT WORK?</h2>
               </div>
-              <h1>Brett Hartmann</h1>
-              <h2>Fullstack Developer</h2>
-              <p>Backend, Spotify API, Node, Angular</p>
+          </div>
+          <div class="row text-center">
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">SNAP OR UPLOAD YOUR PICTURE</h4>
+                  <p class="text-muted">Take a clear photo of your face</p>
+              </div>
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-windows fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">ANALYZING YOUR EXPRESSION THROUGH COGNITIVE SOFTWARE</h4>
+                  <p class="text-muted">We use the Microsoft Project Oxford Face API to detect your emotions</p>
+              </div>
+              <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-spotify fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4 class="service-heading">DELIVERING MUSIC THAT MATCHES YOUR MOOD</h4>
+                  <p class="text-muted"> Spotify API returns your customized playlist</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="sample-playlists" class="bg-light-gray">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">SAMPLE PLAYLISTS</h2>
+                  <h3 class="section-subheading text-muted"> <span style="color:gray">See mood and playlist pairings for famous faces </span> </h3>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 col-sm-6 sample-playlists-item">
+                  <a ng-click="gotToPlaylist($event,'happy')" class="sample-playlists-link" data-toggle="modal">
+                      <div class="sample-playlists-hover">
+                          <div class="sample-playlists-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/sample-playlists/HAPPY.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="sample-playlists-caption">
+                      <h4>Barack Obama</h4>
+                      <p class="text-muted">Happy</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 sample-playlists-item">
+                  <a ng-click="gotToPlaylist($event,'surprise')"  class="sample-playlists-link" data-toggle="modal">
+                      <div class="sample-playlists-hover">
+                          <div class="sample-playlists-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/sample-playlists/BRUNO_MARS_FINAL.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="sample-playlists-caption">
+                      <h4>Bruno Mars</h4>
+                      <p class="text-muted">Surprise</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 sample-playlists-item">
+                  <a ng-click="gotToPlaylist($event,'sad')" class="sample-playlists-link" data-toggle="modal">
+                      <div class="sample-playlists-hover">
+                          <div class="sample-playlists-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/sample-playlists/SADNESS.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="sample-playlists-caption">
+                      <h4>Child</h4>
+                      <p class="text-muted">Sad</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 sample-playlists-item">
+                  <a ng-click="gotToPlaylist($event,'neutral')"  class="sample-playlists-link" data-toggle="modal">
+                      <div class="sample-playlists-hover">
+                          <div class="sample-playlists-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/sample-playlists/SCARLETT_JOHANSSEN_FINAL.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="sample-playlists-caption">
+                      <h4>Scarlett Johanssen</h4>
+                      <p class="text-muted">Neutral</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 sample-playlists-item">
+                  <a ng-click="gotToPlaylist($event,'anger')"  class="sample-playlists-link" data-toggle="modal">
+                      <div class="sample-playlists-hover">
+                          <div class="sample-playlists-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/sample-playlists/ANGER.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="sample-playlists-caption">
+                      <h4>Hugh Laurie</h4>
+                      <p class="text-muted">Anger</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 sample-playlists-item">
+                  <a ng-click="gotToPlaylist($event,'disgust')" class="sample-playlists-link" data-toggle="modal">
+                      <div class="sample-playlists-hover">
+                          <div class="sample-playlists-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/sample-playlists/DISGUST.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="sample-playlists-caption">
+                      <h4>Woman</h4>
+                      <p class="text-muted">Disgust</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">What Can Janus Do?</h2>
+                  <h3 class="section-subheading text-muted">Gauge emotions based on facial recognition tech</h3>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <ul class="timeline">
+                      <li>
+                          <div class="timeline-image">
+                              <img class="img-circle img-responsive" src="img/about/party.png" alt="">
+                          </div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4>Smart Parties</h4>
+                                  <h4 class="subheading">No Need for a DJ</h4>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted">Generate a playlist based on the partygoers emotions</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="timeline-inverted">
+                          <div class="timeline-image">
+                              <img class="img-circle img-responsive" src="img/about/cafe.png" alt="">
+                          </div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4>Satisfy Patrons</h4>
+                                  <h4 class="subheading">Great for Cafes and Restaurants</h4>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted">Say goodbye to music that annoys your patrons. Janus can tell you whether your playlist is working for your customers.</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="timeline-image">
+                              <img class="img-circle img-responsive" src="img/about/person.png" alt="">
+                          </div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4>Home and Health</h4>
+                                  <h4 class="subheading">Your own personal music picker</h4>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted">Track your mood in a fun way and keep track of your mental state</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="timeline-inverted">
+                          <div class="timeline-image">
+                              <h4>Learn
+                                  <br>More
+                                  <br>Today</h4>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="contact">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">TRY IT NOW</h2>
+                  <h3 class="section-subheading text-muted">Upload or Add a URL of Your Face</h3>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="demo-form">
+                      <div class="row">
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                              <div>
+                                  <span style="color: white; font-size: 1.25em; text-align: center;">Copy and Paste an Image URL</span>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Image URL *" id="img-url">
+                              </div>
+                              <div class="clearfix"></div>
+                              <div id="success"></div>
+                              <button type="submit" ng-click="urlEmotion()" class="btn btn-xl">Image URL</button>
+                              <br>
+                              <br>
+                              <br>
+                              <div>
+                                  <span style="color: white; font-size: 1.25em; text-align: center;">Have your own file?</span>
+                              </div>
+                              <br>
+                              <label for="filename" class="custom-file-upload">
+                                  <i class="fa fa-cloud-upload"></i> CHOOSE FILE
+                              </label>
+                              <input id="filename" type="file" />
+                              <button id="imageUploadButton" class="btn btn-xl" ng-click='getFacialExpressionScore() '>Upload</button>
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 column-height-fix">
+                              <h2 ng-hide="currentImage" style="color:white;">Your Mood Stats Here</h2>
+                              <img class="round" ng-src={{currentImage}}></img>
+                              <div class="emotion-demo-header" ng-show="currentImage"> <span style="font-size: 2em; color: #FFFFFF; font-family: arial"> Your Mood Scores </span></div>
+                              <button class="redirect-btn" ng-show="currentImage" ui-sref='getphoto'>Get Your Playlist</button>
+                              <span style="font-size: 1em; color: #FFFFFF; font-family: arial;">
+                              <ul style="list-style-type: none;" ng-repeat="mood in emotionsArr">
+                              <li style="list-style-type: none;">{{mood[1]}} {{mood[0]}}&#47;10</li>
+                            </ul>
+                            </span>
+                          </div>
+                          <br>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="col-lg-12">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">We are the Project Janus Team</h2>
+                <h3 class="section-subheading text-muted">We speak JavaScript and we love to build this</h3>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
-              <div class="img-box">
-                <img src="/img/team/mike-linkedin-profile.jpg" class="img-responsive">
-                <ul class="text-center">
-                  <a href="https://github.com/mikethecodegeek"><li><i class="fa fa-github"></i></li></a>
-                  <a href="https://www.linkedin.com/in/michael-sanford-1180b3115"><li><i class="fa fa-linkedin"></i></li></a>
-                  <a href="https://twitter.com/Mikethecodegeek"><li><i class="fa fa-twitter"></i></li></a>
-                </ul>
+            <div class="row pt-md">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
+                <div class="img-box">
+                  <img src="/img/team/brett-linkedin-profile.jpeg" class="img-responsive">
+                  <ul class="text-center">
+                    <a href="https://github.com/brehar"><li><i class="fa fa-github"></i></li></a>
+                    <a href="https://www.linkedin.com/in/brett-hartman-37955659"><li><i class="fa fa-linkedin"></i></li></a>
+                    <a href="https://twitter.com/bretthartman8"><li><i class="fa fa-twitter"></i></li></a>
+                  </ul>
+                </div>
+                <h1>Brett Hartmann</h1>
+                <h2>Fullstack Developer</h2>
+                <p>Backend, Spotify API, Node, Angular</p>
               </div>
-              <h1>Michael Sanford</h1>
-              <h2>Fullstack Developer</h2>
-              <p>Frontend &amp; Backend, Microsoft Facial Recognition API, Node, jQuery, Angular MVC</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
-              <div class="img-box">
-                <img src="/img/team/kim-linkedin-profile.jpg" class="img-responsive">
-                <ul class="text-center">
-                  <a href="https://github.com/KimSarabia"><li><i class="fa fa-github"></i></li></a>
-                  <a href="https://www.linkedin.com/in/kimberlysarabia"><li><i class="fa fa-linkedin"></i></li></a>
-                  <a href="https://twitter.com/HiKimberlyJane"><li><i class="fa fa-twitter"></i></li></a>
-                </ul>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
+                <div class="img-box">
+                  <img src="/img/team/mike-linkedin-profile.jpg" class="img-responsive">
+                  <ul class="text-center">
+                    <a href="https://github.com/mikethecodegeek"><li><i class="fa fa-github"></i></li></a>
+                    <a href="https://www.linkedin.com/in/michael-sanford-1180b3115"><li><i class="fa fa-linkedin"></i></li></a>
+                    <a href="https://twitter.com/Mikethecodegeek"><li><i class="fa fa-twitter"></i></li></a>
+                  </ul>
+                </div>
+                <h1>Michael Sanford</h1>
+                <h2>Fullstack Developer</h2>
+                <p>Frontend &amp; Backend, Microsoft Facial Recognition API, Node, jQuery, Angular MVC</p>
               </div>
-              <h1>Kim Sarabia</h1>
-              <h2> Frontend Developer &amp; UI Designer </h2>
-              <p>Angular, HTML5, CSS3, JavaScript</p>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
+                <div class="img-box">
+                  <img src="/img/team/kim-linkedin-profile.jpg" class="img-responsive">
+                  <ul class="text-center">
+                    <a href="https://github.com/KimSarabia"><li><i class="fa fa-github"></i></li></a>
+                    <a href="https://www.linkedin.com/in/kimberlysarabia"><li><i class="fa fa-linkedin"></i></li></a>
+                    <a href="https://twitter.com/HiKimberlyJane"><li><i class="fa fa-twitter"></i></li></a>
+                  </ul>
+                </div>
+                <h1>Kim Sarabia</h1>
+                <h2> Frontend Developer &amp; UI Designer </h2>
+                <p>Angular, HTML5, CSS3, JavaScript</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <span class="copyright">MADE BY BRETT, KIM, AND MIKE</span>
-            </div>
+  <footer>
+    <nav class=container>
+      <ul style="list-style-type: none;">
+        <li>
+          <p>Project Janus &copy; 2016
+            <a href="https://bretthartman.net/">Brett Hartman</a>,
+            <a href="https://michaelsanford.tech/">Mike Sanford</a>,
+            <a href="https://kimsarabia.com/">Kim Sarabia</a>
+          </p>
+          <p>It is available for use and modification under the
+            <a href="https://opensource.org/licenses/MIT">MIT&nbsp;License</a>.
+          </p>
+          <a href="https://github.com/mikethecodegeek/project-janus-reduxmit">Project Janus on GitHub</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 
-        </div>
-    </div>
-</footer>
+</div>

@@ -80,8 +80,8 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
 
     function ShowCam() {
         Webcam.set({
-            width: 320,
-            height: 240,
+            width: 640,
+            height: 480,
             image_format: 'jpeg',
             jpeg_quality: 100
         });

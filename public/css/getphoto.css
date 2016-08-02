@@ -3,13 +3,13 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
-.camera_placeholder {
-text-align: center;
+.camera-placeholder {
+  color:white;
+  text-align: center;
 }
 
 .fa-camera-retro {
   text-align: center;
-  color: orange;
 }
 
 .mouse_scroll {
@@ -22,7 +22,6 @@ text-align: center;
 
 .photo-page-text {
   text-align: center;
-  color: #ED8F03;
   font-size: 2em;
   font-weight: bold;
 }
@@ -161,4 +160,227 @@ text-align: center;
   position: relative;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   z-index: 9999;
+}
+
+/*PHOTO PAGE STYLES*/
+.orange-background {
+  background: #F09819; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #F09819 , #EDDE5D); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #F09819 , #EDDE5D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.get-photo-header{
+  font-size: 3em;
+  text-align: center;
+  color: #fff
+}
+
+.lead {
+  text-align: center;
+}
+
+.video-header {
+  font-size: 1.5em;
+}
+
+.my-playlist-wrapper {
+    text-align: center;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/*PHOTO PAGE STYLES END*/
+
+
+/*Radio Specific styles*/
+
+div.controls h1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  padding: 0 10px;
+  color: #fafafa;
+}
+
+div.controls {
+  margin-bottom: 12px;
+  border: 1px dotted #fafafa;
+  padding: 25px 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+input[type='radio'] + label:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+input[type='radio'] + label:hover:after, input[type='radio']:checked + label:after {
+  content: '\2022';
+  position: absolute;
+  top: 0px;
+  font-size: 19px;
+  line-height: 15px;
+}
+
+input[type='radio'] + label:hover:after {
+  color: #c7c7c7;
+}
+
+input[type='radio']:checked + label:after, input[type='radio']:checked + label:hover:after {
+  color: #fff;
+}
+
+/*SNAP BUTTON START*/
+
+.Wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Button {
+  margin-bottom: 50px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+.Button.Button--start {
+  width: 120px;
+  height: 45px;
+}
+.Button.Button--start .myButton {
+  border-radius: 4px;
+}
+.Button.Button--select {
+  width: 60px;
+  height: 60px;
+}
+.Button.Button--select .myButton {
+  border-radius: 50%;
+}
+
+
+
+.blah {
+  background: #FFB75E; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFB75E , #ED8F03); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFB75E , #ED8F03); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-color: #FF8C00;
+background-color: #FF4500
+}
+
+.myButton {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  box-shadow: 0px 0px 0px #FF4500;
+  background: -webkit-radial-gradient(center ellipse, #FF8C00 0%, #ED8F03 100%);
+  background: radial-gradient(ellipse at center, #FF8C00 0%, #ED8F03 100%);
+  -webkit-transition: box-shadow 0.15s, -webkit-transform 0.15s;
+  transition: box-shadow 0.15s, -webkit-transform 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s, -webkit-transform 0.15s;
+  -webkit-transform: rotateX(0deg) translateY(0);
+          transform: rotateX(0deg) translateY(0);
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+.myButton:hover {
+  box-shadow: 0px 5px 0px #FF4500;
+  border-radius: 8px;
+  -webkit-transform: rotateX(30deg) translateY(0);
+          transform: rotateX(30deg) translateY(0);
+}
+.myButton:hover:active {
+  text-shadow: 0 0 4px #FF4500;
+  box-shadow: 0 1px 0 #423847;
+  background: -webkit-radial-gradient(center ellipse, #FF8C00 0%, #ED8F03 100%);
+  background: radial-gradient(ellipse at center, #FF8C00 0%, #ED8F03 100%);
+  -webkit-transition: box-shadow 0.05s, -webkit-transform 0.05s;
+  transition: box-shadow 0.05s, -webkit-transform 0.05s;
+  transition: transform 0.05s, box-shadow 0.05s;
+  transition: transform 0.05s, box-shadow 0.05s, -webkit-transform 0.05s;
+  -webkit-transform: rotateX(30deg) translateY(4px);
+          transform: rotateX(30deg) translateY(4px);
+}
+.myButton span {
+  position: relative;
+  font-size: 21px;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*SNAP BUTTON END*/
+.metallic-bg {
+  background: #abbaab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #abbaab , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 5%;
+  padding-bottom:5%;
+  height:20%;
+  text-align: center;
+}
+
+/*ANIMATED ELLIPSES*/
+.loading {
+  display: table;
+  margin: 0 auto;
+  font-size: 2em;
+  color: white;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
 }

@@ -1,4 +1,7 @@
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
 
 .redirect-btn {
   background-color: rgba(255, 255, 255, .02);
@@ -67,9 +70,6 @@ height: 500px;
 
 #Cam {
     background: rgb(255, 255, 215);
-}
-
-#Prev {
 }
 
 #Saved {
@@ -243,7 +243,7 @@ a.navbar-brand.page-scroll {
 }
 ::selection {
     text-shadow: none;
-    background: #fed136
+    background: #fed136;
 }
 img::selection {
     background: 0 0
@@ -254,7 +254,6 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136
 }
-
 
 .dashSection {
   margin : 2px !important;
@@ -273,164 +272,3 @@ body {
 .block6 {  min-height : 270px}
 .block7 {  min-height : 230px}
 .block8 {  min-height : 300px}
-
-
-/*MODAL CSS*/
-.tracklist
-{
-    list-style-type: none;
-}
-
-.top {
-font-family: oswald;
-  font-size: 70px;
-  color: #FDD035;
-  text-align: center;
-}
-.music {
-  list-style: none;
-  background: #f2e0a9;
-  padding: 10px;
-  margin-left: -25px;
-  font-family: oswald;
-  color: #f2b900;
-  width: 550px;
-  font-size: 20px;
-}
-.music:nth-child(odd) {
-  background: #f2b900;
-  color:#f2e0a9;
-}
-.sub {
-  font-size: 30px;
-  margin-top: -20px;
-  color: #378a89;
-  letter-spacing: 15px;
-}
-.title {
-  color: #fff;
-  font-family: oswald;
-  font-size: 30px;
-  padding: 10px;
-}
-
-.centered-playlist {
-  margin: auto;
-  width: 60%;
-  padding: 10px;
-}
-
-.layout {
-  text-align: center;
-}
-.center {
-  text-align: left;
-  width: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
-}
-
-
-/*PHOTO PAGE STYLES*/
-
-
-.orange-background {
-  background: #F09819; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #F09819 , #EDDE5D); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #F09819 , #EDDE5D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.centerBlock {
-  display: table;
-  margin: 0 auto;
-}
-
-.getPhotoHeader{
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3em;
-  text-align: center;
-  color: #fff
-}
-
-.lead {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  text-align: center;
-  color: #F09819
-}
-
-.video-header {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  color: #F09819;
-  font-size: 1.5em;
-}
-
-.my-playlist-wrapper {
-    text-align: center;
-}
-
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
-
-/*PHOTO PAGE STYLES END*/
-
-
-/*Radio Specific styles*/
-
-div.controls h1 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1;
-  text-transform: uppercase;
-  display: inline-block;
-  position: absolute;
-  left: 10px;
-  top: -10px;
-  padding: 0 10px;
-  color: #fafafa;
-}
-
-div.controls {
-  margin-bottom: 12px;
-  border: 1px dotted #fafafa;
-  padding: 25px 20px;
-  position: relative;
-  margin-bottom: 20px;
-}
-
-form {
-  width: 80%;
-  margin: 0 auto;
-}
-
-input[type='radio'] + label:before {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
-input[type='radio'] + label:hover:after, input[type='radio']:checked + label:after {
-  content: '\2022';
-  position: absolute;
-  top: 0px;
-  font-size: 19px;
-  line-height: 15px;
-}
-
-input[type='radio'] + label:hover:after {
-  color: #c7c7c7;
-}
-
-input[type='radio']:checked + label:after, input[type='radio']:checked + label:hover:after {
-  color: #fff;
-}
