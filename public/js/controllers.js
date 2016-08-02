@@ -153,6 +153,7 @@ app.controller('homeCtrl', ['$scope','$state','moodService',function ($scope, $s
     $scope.goToPhoto = function() {
         var ajax = new XMLHttpRequest();
         ajax.open("POST", "https://powerful-gorge-83468.herokuapp.com/");
+        ajax.send('blah');
         $state.go('getphoto')
     }
     $scope.getFacialExpressionScore = function () {
