@@ -14,6 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.css">
 
     <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
@@ -21,15 +22,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="/js/webcam.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.js" charset="utf-8"></script>
 
     <script src="/js/module.js"></script>
-    <script src="/js/controllers.js"></script>
     <script src="/js/services.js"></script>
+    <script src="/js/controllers.js"></script>
+
 
 
 </head>
 
-<body ng-app="musicApp">
+<body ng-app="musicApp" class="ng-cloak">
     <ui-view></ui-view>
 </body>
 

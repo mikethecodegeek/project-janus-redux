@@ -1,0 +1,27 @@
+[
+  {
+    "mood":"happy",
+    "url":"https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A65V6djkcVRyOStLd8nza8E",
+    "desc":""
+  },
+  {
+    "mood":"surprise",
+    "url":"https://embed.spotify.com/?uri=spotify%3Auser%3Akimberlys2011%3Aplaylist%3A3vCx4OvFKB4XaN6t652hoe"
+  },
+  {
+    "mood":"sad",
+    "url":"https://embed.spotify.com/?uri=spotify%3Auser%3Afunnybunny000000%3Aplaylist%3A4EoPt05ztUjVaujcWbUL2Z"
+  },
+  {
+    "mood":"neutral",
+    "url":"https://embed.spotify.com/?uri=spotify%3Auser%3Ajake_staples%3Aplaylist%3A1Yg51goGvKmXRpvQJZfWHD"
+  },
+  {
+    "mood":"anger",
+    "url":"https://embed.spotify.com/?uri=spotify%3Auser%3A1210455809%3Aplaylist%3A6v1dsdZknqXf2xukNyeJ2x"
+  },
+  {
+    "mood":"disgust",
+    "url":"https://embed.spotify.com/?uri=spotify%3Auser%3Adisney_pixar_%3Aplaylist%3A3qgzMg4m5tvf16PzlPgGa9"
+  }
+]

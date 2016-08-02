@@ -25,3 +25,23 @@ app.service('Mood', function() {
         return this.spotifyUsername;
     };
 });
+
+app.factory('moodService',['$http',function($http){
+    var _mood = "surprise";
+    var _playlists = null;
+
+    return {
+        getMood : function(){
+            return _mood;
+        },
+        setMood : function(mood){
+            _mood = mood;
+        },
+        getPlaylists : function(){
+            return   $http({
+                method:'GET',
+                url:'/playlists'
+              });
+        }
+    }
+}]);

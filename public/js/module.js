@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('musicApp', ['ui.router', 'spotify']);
+var app = angular.module('musicApp', ['ui.router', 'spotify', 'angular-loading-bar']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
@@ -11,6 +11,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/musicresults',
         templateUrl: '/html/musicresults.html',
         controller: 'musicresultsCtrl'
+    }).state('playlist', {
+        url: '/playlist',
+        templateUrl: '/html/playlist.html',
+        controller: 'playlistCtrl'
     }).state('getphoto', {
         url: '/getphoto',
         templateUrl: '/html/getphoto.html',
@@ -22,7 +26,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.config(function(SpotifyProvider) {
     SpotifyProvider.setClientId('b52dc91988324fd697d1f2db77378d46');
-
     $.ajax({
         url: 'https://spotify-token.herokuapp.com',
         method: 'GET',
