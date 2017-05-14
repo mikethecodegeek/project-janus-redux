@@ -111,7 +111,7 @@ app.controller('getphotoCtrl', function ($scope, $state, Mood) {
 
     function getEmotions() {
         var apiKey = "1dd1f4e23a5743139399788aa30a7153";
-        var apiUrl = "https://api.projectoxford.ai/emotion/v1.0/recognize";
+        var apiUrl = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?";
 
         var file = '';
 
