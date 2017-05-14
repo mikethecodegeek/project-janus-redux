@@ -159,7 +159,7 @@ app.controller('homeCtrl', ['$scope','$state','moodService',function ($scope, $s
     $scope.getFacialExpressionScore = function () {
         console.log('getFacialExpressionScore');
         var apiKey = "1dd1f4e23a5743139399788aa30a7153";
-        var apiUrl = "https://api.projectoxford.ai/emotion/v1.0/recognize";
+        var apiUrl = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?";
         console.log('image upload click!!!');
         var file = document.getElementById('filename').files[0];
         CallAPI(file, apiUrl, apiKey);
@@ -168,7 +168,7 @@ app.controller('homeCtrl', ['$scope','$state','moodService',function ($scope, $s
     $scope.urlEmotion = function () {
        console.log('urlEmotion');
        var apiKey = "1dd1f4e23a5743139399788aa30a7153";
-       var apiUrl = "https://api.projectoxford.ai/emotion/v1.0/recognize";
+       var apiUrl = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?";
        var imgUrl = ($('#img-url').val())
        $scope.currentImage=imgUrl;
        console.log($scope.currentImage);
